@@ -1,0 +1,22 @@
+{
+  "name": "Trio Fun",
+  "description": "Trio Fun for Everyone",
+  "launch_path": "/cracked/index.html",
+  "icons": [{
+    "src": "/cracked/icons/happytom.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }, {
+    "src": "/cracked/icons/happytom-small.png",
+    "sizes": "128x128",
+    "type": "image/png"
+  }],
+  "developer": {
+    "name": "Sam Andreae",
+    "url": "http://samandreae.com"
+  },
+  "default_locale": "en",
+  "fullscreen": "true",
+  "orientation": "portrait-primary",
+  "display": "fullscreen"
+}
