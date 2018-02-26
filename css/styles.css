@@ -17,8 +17,9 @@ audio {
 }
 
 .flex-container {
-    width: 100vw;
-    height: 100vh;
+    padding-top : 5vh;
+    width: 100%;
+    height: 95vh;
     display: -webkit-flex;
     display: flex;  
     -webkit-flex-flow: column wrap;
@@ -51,9 +52,9 @@ audio {
     -webkit-flex: 1 20%;
     flex: 1 20%;
 }
-#drag-el {background-color: black; height: 40px;}
+.drag-el {background-color: black; height: 5%; width: 100%; position: fixed;}
 .active {background-color: red !important;}
-#demo {visibility: hidden; max-height: 100vh;}
+ #demo {visibility: hidden; height: 100%;}
 .panel-101 {background: green; max-height: 100%}
 .panel-201 {background: orange; max-height: 100%}
 .panel-202 {background: pink; max-height: 100%}
