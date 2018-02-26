@@ -81,7 +81,7 @@
       defaultSettings = {
         pageClass          : "dragend-page",
         direction          : "horizontal",
-        minDragDistance    : "100",
+        minDragDistance    : "500",
         onSwipeStart       : noop,
         onSwipeEnd         : noop,
         onDragStart        : noop,
