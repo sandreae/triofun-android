@@ -93,7 +93,7 @@
         itemsInPage        : 1,
         scribe             : 0,
         borderBetweenPages : 0,
-        duration           : 300,
+        duration           : 200,
         preventDrag        : false
       },
 
