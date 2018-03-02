@@ -52,10 +52,10 @@ document.addEventListener("DOMContentLoaded", function() {
 			setInterval(function() {event.target.classList.remove("active")}, 200)
 		})
 
-		__().sine({frequency:180}).adsr({id:"bass",envelope:0.2}).lowpass(120).compressor({release:0}).dac();
-		__().sine(80).adsr({id:"kick",envelope:0.1}).connect("compressor"); //100ms envelope
-		__().pink().adsr({id:"snare",envelope:0.08}).connect("compressor"); //50ms
-		__().white().adsr({id:"hihat",envelope:0.05}).connect("compressor").play(); //10ms
+		__().sine({frequency:180}).adsr({id:"bass",envelope:0.4}).lowpass(120).compressor({release:0}).dac();
+		__().sine(80).adsr({id:"kick",envelope:0.2}).connect("compressor"); //100ms envelope
+		__().pink().adsr({id:"snare",envelope:0.1}).connect("compressor"); //50ms
+		__().white().adsr({id:"hihat",envelope:0.1}).connect("compressor").play(); //10ms
 
 		__().adc(0).overdrive().connect("dac")
 
