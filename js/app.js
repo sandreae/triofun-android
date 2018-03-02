@@ -34,28 +34,28 @@ document.addEventListener("DOMContentLoaded", function() {
 		drum1.addEventListener('touchstart', function(event) {
 			__("#bass").adsr("trigger")
 			this.classList.add("active")
-			setInterval(function() {event.target.classList.remove("active")}, 200)
+			setInterval(function() {event.target.classList.remove("active")}, 500)
 		})
 		drum2.addEventListener('touchstart', function(event) {
 			__("#kick").adsr("trigger")
 			this.classList.add("active")
-			setInterval(function() {event.target.classList.remove("active")}, 200)
+			setInterval(function() {event.target.classList.remove("active")}, 500)
 		})
 		drum3.addEventListener('touchstart', function(event) {
 			__("#snare").adsr("trigger")
 			this.classList.add("active")
-			setInterval(function() {event.target.classList.remove("active")}, 200)
+			setInterval(function() {event.target.classList.remove("active")}, 500)
 		})
 		drum4.addEventListener('touchstart', function(event) {
 			__("#hihat").adsr("trigger")
 			this.classList.add("active")
-			setInterval(function() {event.target.classList.remove("active")}, 200)
+			setInterval(function() {event.target.classList.remove("active")}, 500)
 		})
 
-		__().sine({frequency:180}).adsr({id:"bass",envelope:0.4}).lowpass(120).compressor({release:0}).dac();
-		__().sine(80).adsr({id:"kick",envelope:0.2}).connect("compressor"); //100ms envelope
-		__().pink().adsr({id:"snare",envelope:0.1}).connect("compressor"); //50ms
-		__().white().adsr({id:"hihat",envelope:0.1}).connect("compressor").play(); //10ms
+		__().sine({frequency:180}).adsr({id:"bass",envelope:0.8}).lowpass(120).compressor({release:0}).dac();
+		__().sine(80).adsr({id:"kick",envelope:0.5}).connect("compressor"); //100ms envelope
+		__().pink().adsr({id:"snare",envelope:0.3}).connect("compressor"); //50ms
+		__().white().adsr({id:"hihat",envelope:0.3}).connect("compressor").play(); //10ms
 
 		__().adc(0).overdrive().connect("dac")
 
