@@ -33,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		})
 
 		drum1.addEventListener('click', function(event) {
-      unlock()
       this.classList.add("active")
 			__("#bass").adsr("trigger")
       var msg = new SpeechSynthesisUtterance('saw')
@@ -41,7 +40,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			setInterval(function() {event.target.classList.remove("active")}, 500)
 		})
 		drum2.addEventListener('click', function(event) {
-      unlock()
       this.classList.add("active")
 			__("#kick").adsr("trigger")
       var msg = new SpeechSynthesisUtterance('sore')
@@ -49,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			setInterval(function() {event.target.classList.remove("active")}, 500)
 		})
 		drum3.addEventListener('click', function(event) {
-      unlock()
       this.classList.add("active")
 			__("#snare").adsr("trigger")
 			setInterval(function() {event.target.classList.remove("active")}, 500)
