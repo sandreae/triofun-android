@@ -5,7 +5,8 @@ function unlock() {
 
 	// create empty buffer and play it
 
-	var myContext = cracked.audioContext
+	var AudioContext = window.AudioContext || window.webkitAudioContext;
+	var myContext = new AudioContext();
 
 	var buffer = myContext.createBuffer(1, 1, 22050);
 	console.log(buffer)
