@@ -19,8 +19,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		var drum4 = document.getElementById('panel-204')
 		var voicetog = false
 
-    console.log(__.audioContext)
-
 		voice_button.addEventListener('click', function(event) {
 			console.log("voice_button click")
 			voicetog = !voicetog;
@@ -86,7 +84,7 @@ stop.disabled = true;
 
   var chunks = [];
 
-  initRecorder = function(stream) {
+  initRecorder = function() {
   	console.log(window.stream)
     var mediaRecorder = new MediaRecorder(window.stream);
 

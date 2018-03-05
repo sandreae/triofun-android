@@ -13,7 +13,7 @@ var _nodeStore = {},
     _currentSelector = "",
     _currentMacro = [],
     _debugEnabled = false,
-    _context = window.AudioContext ? new AudioContext() : new webkitAudioContext();
+    _context = window.myContext
 
 /**
  * #Finding#
@@ -95,8 +95,6 @@ function find() {
     _previousNode = null;
     return cracked;
 }
-
-cracked.audioContext = _context
 
 /**
  * find nodes in a macro with a selector updates the _selectedNodes array

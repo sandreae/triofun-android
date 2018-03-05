@@ -1,4 +1,6 @@
 var isUnlocked = false;
+var AudioContext = window.AudioContext || window.webkitAudioContext;
+window.myContext = new AudioContext();
 
 function unlock() {
 
@@ -9,15 +11,17 @@ function unlock() {
 	} else {
 
 	console.log("unlock webaudio")
+	
 	// create empty buffer and play it
 
-	var buffer = cracked.audioContext.createBuffer(1, 1, 22050);
 
-	var source = cracked.audioContext.createBufferSource();
+	var buffer = window.myContext.createBuffer(1, 1, 22050);
+
+	var source = window.myContext.createBufferSource();
 
 	source.buffer = buffer;
 
-	source.connect(cracked.audioContext.destination);
+	source.connect(window.myContext.destination);
 
 	source.start(0);
 
