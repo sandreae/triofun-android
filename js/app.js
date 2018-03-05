@@ -47,12 +47,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			setInterval(function() {event.target.classList.remove("active")}, 500)
 		})
 		drum3.addEventListener('click', function(event) {
-      this.classList.add("active")
-			__("#snare").adsr("trigger")
-			setInterval(function() {event.target.classList.remove("active")}, 500)
-		})
-		drum4.addEventListener('click', function(event) {
-    unlock()
       __().sine({frequency:180}).adsr({id:"bass",envelope:0.8}).lowpass(120).compressor({release:0}).dac();
       __().sine(80).adsr({id:"kick",envelope:0.5}).connect("compressor"); //100ms envelope
       __().pink().adsr({id:"snare",envelope:0.3}).connect("compressor"); //50ms
@@ -63,6 +57,9 @@ document.addEventListener("DOMContentLoaded", function() {
       cracked.soundLoaded = function(x) {
         console.log("sample loaded", x)
       }
+		})
+		drum4.addEventListener('click', function(event) {
+    unlock()
 		})
 
 // set up basic variables for app

@@ -34,6 +34,7 @@ function unlock() {
 		if((source.playbackState === source.PLAYING_STATE || source.playbackState === source.FINISHED_STATE)) {
 
 			isUnlocked = true;
+			console.log(window.myContext)
 
 		}
 

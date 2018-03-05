@@ -14,6 +14,7 @@ var _nodeStore = {},
     _currentMacro = [],
     _debugEnabled = false,
     _context = window.myContext
+    console.log(_context)
 
 /**
  * #Finding#
