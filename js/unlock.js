@@ -2,25 +2,20 @@ var isUnlocked = false;
 
 function unlock() {
 
-			
-
-	if(isIOS || this.unlocked) return;
-
-
 
 	// create empty buffer and play it
 
-	var myContext = _context = window.AudioContext ? new AudioContext() : new webkitAudioContext()
+	var myContext = cracked.audioContext
 
 	var buffer = myContext.createBuffer(1, 1, 22050);
-
+	console.log(buffer)
 	var source = myContext.createBufferSource();
-
+	console.log(source)
 	source.buffer = buffer;
-
+	console.log(myContext.destination)
 	source.connect(myContext.destination);
 
-	source.noteOn(0);
+	source.start(0);
 
 
 

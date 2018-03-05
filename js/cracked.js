@@ -96,6 +96,8 @@ function find() {
     return cracked;
 }
 
+cracked.audioContext = _context
+
 /**
  * find nodes in a macro with a selector updates the _selectedNodes array
  * @function

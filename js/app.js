@@ -19,6 +19,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		var drum4 = document.getElementById('panel-204')
 		var voicetog = false
 
+    console.log(__.audioContext)
+
 		voice_button.addEventListener('click', function(event) {
 			console.log("voice_button click")
 			voicetog = !voicetog;
@@ -32,31 +34,35 @@ document.addEventListener("DOMContentLoaded", function() {
 			}
 		})
 
-		drum1.addEventListener('touchstart', function(event) {
+		drum1.addEventListener('click', function(event) {
       unlock()
       this.classList.add("active")
-      speechSynthesis.speak("Saw")
+      var msg = new SpeechSynthesisUtterance('saw')
+      speechSynthesis.speak(msg)
 			__("#bass").adsr("trigger")
 			setInterval(function() {event.target.classList.remove("active")}, 500)
 		})
-		drum2.addEventListener('touchstart', function(event) {
+		drum2.addEventListener('click', function(event) {
       unlock()
       this.classList.add("active")
-      speechSynthesis.speak("Soar")
+      var msg = new SpeechSynthesisUtterance('sore')
+      speechSynthesis.speak(msg)
 			__("#kick").adsr("trigger")
 			setInterval(function() {event.target.classList.remove("active")}, 500)
 		})
-		drum3.addEventListener('touchstart', function(event) {
+		drum3.addEventListener('click', function(event) {
       unlock()
       this.classList.add("active")
-      speechSynthesis.speak("Sore")
+      var msg = new SpeechSynthesisUtterance('soar')
+      speechSynthesis.speak(msg)
 			__("#snare").adsr("trigger")
 			setInterval(function() {event.target.classList.remove("active")}, 500)
 		})
-		drum4.addEventListener('touchstart', function(event) {
+		drum4.addEventListener('click', function(event) {
       unlock()
       this.classList.add("active")
-      speechSynthesis.speak("Sour")
+      var msg = new SpeechSynthesisUtterance('sour')
+      speechSynthesis.speak(msg)
 			__("#hihat").adsr("trigger")
 			setInterval(function() {event.target.classList.remove("active")}, 500)
 		})
