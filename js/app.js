@@ -32,27 +32,27 @@ document.addEventListener("DOMContentLoaded", function() {
 		})
 
 		drum1.addEventListener('touchstart', function(event) {
+      this.classList.add("active")
       speechSynthesis.speak("Saw")
 			__("#bass").adsr("trigger")
-			this.classList.add("active")
 			setInterval(function() {event.target.classList.remove("active")}, 500)
 		})
 		drum2.addEventListener('touchstart', function(event) {
+      this.classList.add("active")
       speechSynthesis.speak("Soar")
 			__("#kick").adsr("trigger")
-			this.classList.add("active")
 			setInterval(function() {event.target.classList.remove("active")}, 500)
 		})
 		drum3.addEventListener('touchstart', function(event) {
+      this.classList.add("active")
       speechSynthesis.speak("Sore")
 			__("#snare").adsr("trigger")
-			this.classList.add("active")
 			setInterval(function() {event.target.classList.remove("active")}, 500)
 		})
 		drum4.addEventListener('touchstart', function(event) {
+      this.classList.add("active")
       speechSynthesis.speak("Sour")
 			__("#hihat").adsr("trigger")
-			this.classList.add("active")
 			setInterval(function() {event.target.classList.remove("active")}, 500)
 		})
 
