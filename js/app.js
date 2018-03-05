@@ -57,22 +57,18 @@ document.addEventListener("DOMContentLoaded", function() {
 			setInterval(function() {event.target.classList.remove("active")}, 500)
 		})
 		drum4.addEventListener('click', function(event) {
-      unlock()
-      this.classList.add("active")
-			__("#hihat").adsr("trigger")
-			setInterval(function() {event.target.classList.remove("active")}, 500)
+    unlock()
+      __().sine({frequency:180}).adsr({id:"bass",envelope:0.8}).lowpass(120).compressor({release:0}).dac();
+      __().sine(80).adsr({id:"kick",envelope:0.5}).connect("compressor"); //100ms envelope
+      __().pink().adsr({id:"snare",envelope:0.3}).connect("compressor"); //50ms
+      __().white().adsr({id:"hihat",envelope:0.3}).connect("compressor").play(); //10ms
+
+      __().adc(0).overdrive().connect("dac")
+
+      cracked.soundLoaded = function(x) {
+        console.log("sample loaded", x)
+      }
 		})
-
-		__().sine({frequency:180}).adsr({id:"bass",envelope:0.8}).lowpass(120).compressor({release:0}).dac();
-		__().sine(80).adsr({id:"kick",envelope:0.5}).connect("compressor"); //100ms envelope
-		__().pink().adsr({id:"snare",envelope:0.3}).connect("compressor"); //50ms
-		__().white().adsr({id:"hihat",envelope:0.3}).connect("compressor").play(); //10ms
-
-		__().adc(0).overdrive().connect("dac")
-
-		cracked.soundLoaded = function(x) {
-      console.log("sample loaded", x)
-		}
 
 // set up basic variables for app
 
