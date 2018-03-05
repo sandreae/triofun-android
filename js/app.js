@@ -6,6 +6,7 @@ window.addEventListener('load', function(e) {
 }, false);
 
 document.addEventListener("DOMContentLoaded", function() {
+
   var container = document.getElementById("demo");
   dragend = new Dragend(container, {
     afterInitialize: function() {
@@ -32,24 +33,28 @@ document.addEventListener("DOMContentLoaded", function() {
 		})
 
 		drum1.addEventListener('touchstart', function(event) {
+      unlock()
       this.classList.add("active")
       speechSynthesis.speak("Saw")
 			__("#bass").adsr("trigger")
 			setInterval(function() {event.target.classList.remove("active")}, 500)
 		})
 		drum2.addEventListener('touchstart', function(event) {
+      unlock()
       this.classList.add("active")
       speechSynthesis.speak("Soar")
 			__("#kick").adsr("trigger")
 			setInterval(function() {event.target.classList.remove("active")}, 500)
 		})
 		drum3.addEventListener('touchstart', function(event) {
+      unlock()
       this.classList.add("active")
       speechSynthesis.speak("Sore")
 			__("#snare").adsr("trigger")
 			setInterval(function() {event.target.classList.remove("active")}, 500)
 		})
 		drum4.addEventListener('touchstart', function(event) {
+      unlock()
       this.classList.add("active")
       speechSynthesis.speak("Sour")
 			__("#hihat").adsr("trigger")
