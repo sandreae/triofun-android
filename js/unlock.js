@@ -4,7 +4,7 @@ window.myContext = new AudioContext();
 
 function unlock() {
 
-			
+//// for iOS /////
 
 	if(this.isUnlocked){
 		return;
