@@ -1,13 +1,13 @@
 {
   "name": "Trio Fun",
   "description": "Trio Fun for Everyone",
-  "launch_path": "/triofun/index.html",
+  "launch_path": "/triofun-android/index.html",
   "icons": [{
-    "src": "/triofun/icons/happytom.png",
+    "src": "/triofun-android/icons/happytom.png",
     "sizes": "512x512",
     "type": "image/png"
   }, {
-    "src": "/triofun/icons/happytom-small.png",
+    "src": "/triofun-android/icons/happytom-small.png",
     "sizes": "128x128",
     "type": "image/png"
   }],
