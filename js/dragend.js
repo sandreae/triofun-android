@@ -93,7 +93,7 @@
         itemsInPage        : 1,
         scribe             : 0,
         borderBetweenPages : 0,
-        duration           : 200,
+        duration           : 400,
         preventDrag        : false
       },
 
@@ -380,12 +380,16 @@
           event.stopPropagation();
         }
 
-        addEventListener(doc.body, moveEvent, this._onMove);
-        addEventListener(doc.body, endEvent, this._onEnd);
+        console.log(event.touches)
 
-        this.startCoords = getCoords(event);
+        if (event.touches.length > 1) {
+          addEventListener(doc.body, moveEvent, this._onMove);
+          addEventListener(doc.body, endEvent, this._onEnd);
 
-        this.settings.onDragStart.call( this, event );
+          this.startCoords = getCoords(event);
+
+          this.settings.onDragStart.call( this, event );
+        }
 
       },
 
@@ -394,7 +398,7 @@
         event = event.originalEvent || event;
 
         // ensure swiping with one touch and not pinching
-        if ( event.touches && event.touches.length > 1 || event.scale && event.scale !== 1) return;
+        // if ( event.touches && event.touches.length > 1 || event.scale && event.scale !== 1) return;
 
         event.preventDefault();
         if (this.settings.stopPropagation) {
@@ -804,7 +808,7 @@
           this.scrollToPage( this.settings.scrollToPage );
           delete this.settings.scrollToPage;
         }
-		
+    
         if (this.settings.destroy) {
           this.destroy();
           delete this.settings.destroy;

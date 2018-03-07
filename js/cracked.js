@@ -13,8 +13,7 @@ var _nodeStore = {},
     _currentSelector = "",
     _currentMacro = [],
     _debugEnabled = false,
-    _context = window.myContext
-    console.log(_context)
+    _context = window.AudioContext ? new AudioContext() : new webkitAudioContext();
 
 /**
  * #Finding#

@@ -17,9 +17,8 @@ audio {
 }
 
 .flex-container {
-    padding-top : 5vh;
     width: 100vw;
-    height: 95vh;
+    height: 100vh;
     display: -webkit-flex;
     display: flex;  
     -webkit-flex-flow: column wrap;
@@ -64,7 +63,6 @@ audio {
     -webkit-flex: 1 20%;
     flex: 1 20%;
 }
-.drag-el {background-color: black; height: 5%; width: 100%; position: fixed;}
 .active {background-color: red !important;}
  #demo {visibility: hidden; height: 100%;}
 .play-button {border: solid black;}
