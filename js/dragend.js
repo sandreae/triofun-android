@@ -88,7 +88,7 @@
         onDrag             : noop,
         onDragEnd          : noop,
         afterInitialize    : noop,
-        keyboardNavigation : false,
+        keyboardNavigation : true,
         stopPropagation    : false,
         itemsInPage        : 1,
         scribe             : 0,
