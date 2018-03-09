@@ -83,6 +83,7 @@ document.addEventListener("DOMContentLoaded", function() {
             node_id = "#" + this.id
             __(node_id).start()
           })
+
           play_button.addEventListener('touchend', function(event) {
             play_button.classList.remove("active")
             node_id = "#" + this.id
