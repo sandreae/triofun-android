@@ -36,15 +36,6 @@ audio {
     -webkit-flex: 1 100%;
     flex: 1 100%;
 }
-.flex-container-2 {
-    background-size: cover;
-    background-image: url('../images/page2.jpg');
-    width: 100vw;
-}
-.flex-container-2 > * {
-    -webkit-flex: 1 25%;
-    flex: 1 25%;
-}
 
 .flex-container-3 {
     -webkit-flex-flow: row wrap;
