@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			}
 		})
 
-		__().adc(0).overdrive().dac().start(); //10ms
+		__().adc(0).overdrive().dac().play();
 
 		cracked.soundLoaded = function(x) {
       console.log("sample loaded", x)
